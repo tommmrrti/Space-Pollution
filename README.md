@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <h1>Загрязнение в космосе</h1>
