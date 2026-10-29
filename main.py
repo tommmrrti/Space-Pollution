@@ -19,7 +19,7 @@ df_min1 = df_min1.drop(index= 0, errors='ignore')
 
 df_min1 = df_min1[(df_min1[['military', 'navigation', 'science', 'weather', 'all']] != 0).any(axis=1)]
 
-# Работа с графиками matro
+# Работа с первым графиком 
 df_plot=df_mini[(df_mini['all']>20)].copy()
 a = np.array(df_plot['all'])
 b = np.array([Country[:3].upper() for Country in df_plot.index])
@@ -31,6 +31,9 @@ plt.ylabel('Кол-во за год')
 plt.title('2025')
 plt.legend()
 plt.show()
+plt.savefig('first.png', dpi=300, bbox_inches='tight')
+
+#Работа со вторым графиком
 
 df_ploti=df_min1[(df_min1['all']>20)].copy()
 c = np.array(df_ploti['all'])
@@ -43,3 +46,4 @@ plt.ylabel('Кол-во за год')
 plt.title('2025')
 plt.legend()
 plt.show()
+plt.savefig('second.png', dpi=300, bbox_inches='tight')
